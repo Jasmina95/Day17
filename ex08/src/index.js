@@ -46,12 +46,11 @@ function getUsers() {
 function findUser(lastName, gender) {
   try {
     // add approprate code here
-    var user = _.find(users, { 'lastName': lastName, 'gender': gender });
+    var user = _.find(users, { lastName: lastName, gender: gender });
     var iFindUser = `${user.firstName} ${user.lastName} is ${user.age}, ${user.gender}`;
-    
+
     console.log(iFindUser);
     return iFindUser;
-    
   } catch (error) {
     console.log("Cannot read property 'firstName' of undefined"); // Change this line
     return "Cannot read property 'firstName' of undefined"; // Change this line
