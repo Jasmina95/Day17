@@ -39,7 +39,7 @@ const users = [
 function getUsers() {
   var output = "";
   for (let i = 0; i < users.length; i++) {
-    output += `${users[i].id} - ${users[i].firstName} ${users[i].lastName} is ${users[i].age}, ${users[i].gender}\n\n`;
+    output += `${users[i].id} - ${users[i].firstName} ${users[i].lastName} is ${users[i].age}, ${users[i].gender}\n`;
   }
   console.log(output);
   return output;
@@ -50,8 +50,9 @@ function getUsers() {
 function findUserById(id) {
   try {
     // add appropriate code here
-    var user = _.filter(users, { id: id });
-    var iFoundUser = `${user[0].id} - ${user[0].firstName} ${user[0].lastName} is ${user[0].age}, ${user[0].gender}`;
+    var user = _.find(users, { id: id });
+    var iFoundUser = `${user.id} - ${user.firstName} ${user.lastName} is ${user.age}, ${user.gender}`;
+
     console.log(iFoundUser);
     return iFoundUser;
   } catch (error) {
