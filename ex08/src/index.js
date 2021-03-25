@@ -3,7 +3,7 @@ const _ = require("lodash");
 
 // Only change code below this line
 // users nested array with four objects starts here
-const users = [
+var users = [
   {
     firstName: "John",
     lastName: "Doe",
